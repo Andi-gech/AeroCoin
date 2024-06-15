@@ -31,7 +31,7 @@ function App() {
     <div className='relative flex  min-h-screen w-screen  flex-col   justify-evenly items-center  bg-zinc-900'>
       <div className='w-full  px-3 shadow-sm shadow-gray-800 h-[60px] flex flex-row items-center justify-between mt-[10px]'>
         <div className='flex flex-row items-center justify-center'>
-        <img src={userData?.avatar} alt='logo' className='h-[50px] w-[50px] rounded-full border-[2px] border-yellow-400' />
+        <img src={userData?.photo_url} alt='logo' className='h-[50px] w-[50px] rounded-full border-[2px] border-yellow-400' />
         <div className='h-full flex-col mx-2 items-center justify-center'>
           <p className='text-md font-bold text-yellow-300'>@{userData?.username}</p>
           <p className='text-xs text-gray-400'>id: {userData?.id}</p>
