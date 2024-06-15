@@ -8,10 +8,12 @@ import { FcFlashOn, FcTouchscreenSmartphone } from 'react-icons/fc';
 import rocket from './assets/rocket.png';
 import { MdOutlineFlashOn, MdOutlineTask, MdOutlineTouchApp } from 'react-icons/md';
 import { CiCoinInsert } from 'react-icons/ci';
-
+import { retrieveLaunchParams } from '@tma.js/sdk';
 
 function App() {
   const [count, setCount] = useState(0);
+  const {initData}= retrieveLaunchParams();
+  console.log(initData)
  
   
 
