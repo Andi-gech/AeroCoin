@@ -11,7 +11,7 @@ import { CiCoinInsert } from 'react-icons/ci';
 import { retrieveLaunchParams } from '@tma.js/sdk';
 import { useMemo } from 'react';
 import { createAvatar } from '@dicebear/core';
-import { lorelei } from '@dicebear/collection';
+import { bottts } from '@dicebear/collection';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,7 +27,7 @@ function App() {
   const params = new URLSearchParams(initDataRaw);
   const userData = JSON.parse(decodeURIComponent(params.get('user') || '{}'));
   const avatar = useMemo(() => {
-    return createAvatar(lorelei, {
+    return createAvatar(bottts, {
       size: 128,
       // ... other options
     }).toDataUriSync();
