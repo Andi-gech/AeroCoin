@@ -53,7 +53,7 @@ function App() {
         <FaCoins className='h-[20px] w-[20px] text-white' />
         <p className='text-3xl font-bold ml-[20px] text-white'>{count}</p>
         </div>
-        {initDataRaw?.user}
+      
 
       <div
         className='w-[200px] h-[200px] mt-[10px] active:scale-[1.05] transform transition duration-300 shadow-yellow-700 bg-yellow-400 rounded-full flex flex-row items-center justify-center'
