@@ -9,6 +9,9 @@ import rocket from './assets/rocket.png';
 import { MdOutlineFlashOn, MdOutlineTask, MdOutlineTouchApp } from 'react-icons/md';
 import { CiCoinInsert } from 'react-icons/ci';
 import { retrieveLaunchParams } from '@tma.js/sdk';
+import { useMemo } from 'react';
+import { createAvatar } from '@dicebear/core';
+import { lorelei } from '@dicebear/collection';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,7 +26,12 @@ function App() {
   };
   const params = new URLSearchParams(initDataRaw);
   const userData = JSON.parse(decodeURIComponent(params.get('user') || '{}'));
-  
+  const avatar = useMemo(() => {
+    return createAvatar(lorelei, {
+      size: 128,
+      // ... other options
+    }).toDataUriSync();
+  }, []);
 
 
 
