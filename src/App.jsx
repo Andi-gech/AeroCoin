@@ -64,7 +64,7 @@ function App() {
           
         
         </div>
-        {initDataRaw}
+       
       
       </div>
       <div className='w-full flex flex-row items-center mt-5  justify-center'>
