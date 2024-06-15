@@ -23,6 +23,7 @@ function App() {
   };
   const params = new URLSearchParams(initDataRaw);
   const userData = JSON.parse(decodeURIComponent(params.get('user') || '{}'));
+  
 
 
 
@@ -55,6 +56,7 @@ function App() {
           
         
         </div>
+        {initDataRaw}
       
       </div>
       <div className='w-full flex flex-row items-center mt-5  justify-center'>
