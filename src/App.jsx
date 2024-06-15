@@ -21,6 +21,11 @@ function App() {
     setCount(count + 1);
     navigator.vibrate([200, 100, 200]);
   };
+  const params = new URLSearchParams(initDataRaw);
+  const userData = JSON.parse(decodeURIComponent(params.get('user') || '{}'));
+
+
+
 
   return (
     <div className='relative flex  min-h-screen w-screen  flex-col   justify-evenly items-center  bg-zinc-900'>
@@ -28,8 +33,8 @@ function App() {
         <div className='flex flex-row items-center justify-center'>
         <img src={'https://i.ibb.co/6WwH5XK/Logo.png'} alt='logo' className='h-[50px] w-[50px] rounded-full border-[2px] border-yellow-400' />
         <div className='h-full flex-col mx-2 items-center justify-center'>
-          <p className='text-md font-bold text-yellow-300'>@aerocoin</p>
-          <p className='text-xs text-gray-400'>id: 0x000</p>
+          <p className='text-md font-bold text-yellow-300'>@{userData?.username}</p>
+          <p className='text-xs text-gray-400'>id: {userData?.id}</p>
         </div>
         </div>
         <AiOutlineInfoCircle className='h-[20px] w-[20px] text-white' />
@@ -39,7 +44,7 @@ function App() {
         <FaCoins className='h-[20px] w-[20px] text-white' />
         <p className='text-3xl font-bold ml-[20px] text-white'>{count}</p>
         </div>
-        {initDataRaw}
+        {initDataRaw?.user}
 
       <div
         className='w-[200px] h-[200px] mt-[10px] active:scale-[1.05] transform transition duration-300 shadow-yellow-700 bg-yellow-400 rounded-full flex flex-row items-center justify-center'
