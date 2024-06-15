@@ -60,7 +60,7 @@ function App() {
      
      
       </div>
-      <div className='w-[80%] flex flex-row  justify-between mb-[12px]   h-[1px]'><p className='text-white text-sm'>timer</p>
+      <div className='w-[80%] flex flex-row  justify-between my-[20px]   h-[1px]'><p className='text-white text-sm'>timer</p>
       <p className='text-white text-sm'>23:45</p></div>
       <div className='w-[80%] flex flex-row justify-between px-5 mt-3  h-[100px]'>
         <div className='w-[70px] opacity-25 ml-2 h-[85px] bg-zinc-800  bg-opacity-25 flex  flex-col items-center justify-center border-[1px] rounded-md  border-green-500'>
