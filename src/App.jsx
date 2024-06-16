@@ -16,6 +16,8 @@ import { bottts } from '@dicebear/collection';
 function App() {
   const [count, setCount] = useState(0);
   const {initDataRaw}= retrieveLaunchParams();
+  const [isErorr, setIsErorr] = useState(false);
+  const [isSucess, setIsSucess] = useState(false);
   console.log(initDataRaw)
  
   
@@ -40,8 +42,8 @@ useEffect(() => {
       Authorization: `tma ${initDataRaw}`
     },
   })
-  .then(response => response.json())
-  .catch(error => console.error('Error:', error));
+  .then(response => setIsSucess(true))
+  .catch(error => setIsErorr(true));
 }, [initDataRaw]);
 
 
@@ -57,6 +59,8 @@ useEffect(() => {
         </div>
         <AiOutlineInfoCircle className='h-[20px] w-[20px] text-white' />
       </div>
+      {isErorr && <p className='text-red-500'>Error</p>}
+      {isSucess && <p className='text-green-500'>Success</p>}
       
 
       <div className='flex w-full h-[50px]  mt-[10px] flex-row items-center justify-center'>
