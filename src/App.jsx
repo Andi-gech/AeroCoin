@@ -40,7 +40,7 @@ function App() {
     fetch('https://aero-coin-api.vercel.app/', {
       method: 'GET',
       headers: {
-        Authorization: `tma ${initDataRaw}`,
+        Authorization: `tma ${initData}`,
       },
     })
     .then(response => response.json())  // Assuming the response is in JSON format
