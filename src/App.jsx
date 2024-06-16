@@ -34,15 +34,15 @@ function App() {
   }, []);
 
 useEffect(() => {
-  
-fetch('https://aerobotapi.netlify.app', {
-  method: 'POST',
-  headers: {
-    Authorization: `tma ${initDataRaw}`
-  },
-});
-
-}, [initDataRaw])
+  fetch('https://aero-coin-api.vercel.app/', {
+    method: 'POST',
+    headers: {
+      Authorization: `tma ${initDataRaw}`
+    },
+  })
+  .then(response => response.json())
+  .catch(error => console.error('Error:', error));
+}, [initDataRaw]);
 
 
   return (
