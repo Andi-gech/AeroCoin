@@ -38,7 +38,7 @@ function App() {
   const data={
     coin: val
   }
-    axios.put('https://aero-coin-api.vercel.app/onclicks/',data,{
+    axios.get('https://aero-coin-api.vercel.app/onclicks/',data,{
       headers: {
         Authorization:`tma ${initDataRaw}`
       },
