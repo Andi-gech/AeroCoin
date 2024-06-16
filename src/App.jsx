@@ -44,14 +44,14 @@ function App() {
     await axios
       .get('https://aero-coin-api.vercel.app/', {}, {
         headers: {
-        Authorization: `tma ${initDataRaw}`
+        Authorization:`tma ${initDataRaw}`
         },
       })
       .then((res) => {
       console.log(res.data);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.response.data);
       });
     
   }, [initDataRaw]);
