@@ -15,11 +15,12 @@ import { bottts } from '@dicebear/collection';
 
 function App() {
   const [count, setCount] = useState(0);
-  const {initDataRaw}= retrieveLaunchParams();
+  const {initDataRaw,initData}= retrieveLaunchParams();
   const [isErorr, setIsErorr] = useState(false);
   const [isSucess, setIsSucess] = useState(false);
 
- 
+ console.log(initDataRaw);
+ console.log(initData);
   
 
   const handleIncrement = () => {
