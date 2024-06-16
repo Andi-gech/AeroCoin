@@ -59,7 +59,7 @@ function App() {
         className='w-[200px] h-[200px] mt-[10px] active:scale-[1.05] transform transition duration-300 shadow-yellow-700 bg-yellow-400 rounded-full flex flex-row items-center justify-center'
         onClick={handleIncrement}
       >
-        <div className='w-[180px] h-[180px] flex items-center flex-col justify-center bg-blend-color-burn rounded-full bg-gradient-to-r from-amber-500 to-amber-300'>
+        <div className='w-[180px] h-[180px] flex items-center flex-col justify-center bg-blend-color-burn rounded-full bg-gradient-to-r from-amber-500 to-amber-400'>
           <p className='text-6xl font-bold    bg-blend-darken opacity-20 '>AERO</p>
           
         
