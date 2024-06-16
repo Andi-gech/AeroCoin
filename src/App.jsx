@@ -12,6 +12,7 @@ import { retrieveLaunchParams } from '@tma.js/sdk';
 import { useMemo } from 'react';
 import { createAvatar } from '@dicebear/core';
 import { bottts } from '@dicebear/collection';
+import axios from 'axios';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -35,20 +36,24 @@ function App() {
     }).toDataUriSync();
   }, []);
 
-  useEffect(() => {
-    console.log(initDataRaw);
-    fetch('https://aero-coin-api.vercel.app/', {
-      method: 'GET',
-      headers: {
-        Authorization: `tma ${initDataRaw}`,
-      },
-    })
-    .then(response => console.log(response.json()))  // Assuming the response is in JSON format
-    .then(data => {
-      console.log(data);  // Log the data received from the API
-    })
-    .catch(error => console.error('Error fetching data:', error));  // Log any errors
-
+  useEffect(async() => {
+    if (!initData) {
+      setIsErorr(true);
+      return;
+    }
+    await axios
+      .get('https://aerocoin.vercel.app/', {}, {
+        headers: {
+        Authorization: `tma ${initDataRaw}`
+        },
+      })
+      .then((res) => {
+      console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    
   }, [initDataRaw]);
 
   return (
