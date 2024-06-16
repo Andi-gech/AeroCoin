@@ -35,7 +35,7 @@ function App() {
 
 useEffect(() => {
   fetch('https://aero-coin-api.vercel.app/', {
-    method: 'POST',
+    method: 'get',
     headers: {
       Authorization: `tma ${initDataRaw}`
     },
