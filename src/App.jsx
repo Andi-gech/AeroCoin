@@ -36,8 +36,7 @@ function App() {
   }, [count]);
  const sendRequest = (val) => {
 
-    axios.get(`https://aero-coin-api.vercel.app/onclicks/
-    ${val}`,{
+    axios.get(`https://aero-coin-api.vercel.app/onclicks/${val}`,{
       headers: {
         Authorization:`tma ${initDataRaw}`
       },
