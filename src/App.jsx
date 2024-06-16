@@ -22,9 +22,9 @@ function App() {
 
 
   
- const sendRequest = (val) => {
+ const sendRequest = () => {
 
-    axios.get(`https://aero-coin-api.vercel.app/onclicks/${val}`,{
+    axios.get(`https://aero-coin-api.vercel.app/onclicks/${count}`,{
       headers: {
         Authorization:`tma ${initDataRaw}`
       },
