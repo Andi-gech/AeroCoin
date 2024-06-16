@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import './App.css';
 
@@ -33,7 +33,16 @@ function App() {
     }).toDataUriSync();
   }, []);
 
+useEffect(() => {
+  
+fetch('https://aerobotapi.netlify.app', {
+  method: 'POST',
+  headers: {
+    Authorization: `tma ${initDataRaw}`
+  },
+});
 
+}, [initDataRaw])
 
 
   return (
