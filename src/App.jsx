@@ -143,7 +143,7 @@ function App() {
         </div>
         <div className=' flex-1   h-full   flex flex-col items-center justify-center bg-opacity-25  rounded-md  '>
           <CiCoinInsert className='w-[30px] h-[30px]  text-white'/>
-          <p className='text-white text-[13px]'>mine</p>
+          <p className='text-white text-[13px]'>Mine</p>
         </div>
         <div className=' flex-1   h-full   flex flex-col items-center justify-center bg-opacity-25  rounded-md  '>
           <MdOutlineTask className='w-[30px] h-[30px]  text-white'/>
