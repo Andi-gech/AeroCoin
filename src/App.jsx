@@ -42,7 +42,7 @@ useEffect(() => {
       Authorization: `tma ${initDataRaw}`
     },
   })
-  .then(response => setIsSucess(true))
+  .then(response => setIsSucess(response))
   .catch(error => setIsErorr(true));
 }, [initDataRaw]);
 
