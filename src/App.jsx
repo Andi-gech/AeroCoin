@@ -44,9 +44,9 @@ useEffect(() => {
     },
   })
   .then(response => {
-    console.log(response.data)
+    console.log(response)
   })
-  .catch(error => setIsErorr(true));
+  .catch(error => console.log(error));
 }, [initDataRaw]);
 
 
