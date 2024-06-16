@@ -42,7 +42,7 @@ function App() {
       return;
     }
     await axios
-      .get('https://aero-coin-api.vercel.app/',{}, {
+      .get('https://aero-coin-api.vercel.app/', {
         headers: {
         Authorization:`tma ${initDataRaw}`
         },
