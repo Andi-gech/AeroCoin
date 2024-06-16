@@ -18,7 +18,7 @@ function App() {
   const {initDataRaw}= retrieveLaunchParams();
   const [isErorr, setIsErorr] = useState(false);
   const [isSucess, setIsSucess] = useState(false);
-  console.log(initDataRaw)
+
  
   
 
