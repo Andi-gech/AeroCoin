@@ -19,8 +19,7 @@ function App() {
   const [isErorr, setIsErorr] = useState(false);
   const [isSucess, setIsSucess] = useState(false);
 
- console.log(initDataRaw);
- console.log(initData);
+
   
 
   const handleIncrement = () => {
@@ -37,6 +36,7 @@ function App() {
   }, []);
 
   useEffect(() => {
+    console.log(initDataRaw);
     fetch('https://aero-coin-api.vercel.app/', {
       method: 'GET',
       headers: {
