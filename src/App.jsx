@@ -36,19 +36,20 @@ function App() {
     }).toDataUriSync();
   }, []);
 
-useEffect(() => {
-  fetch('https://aero-coin-api.vercel.app/', {
-    method: 'get',
-    headers: {
-      Authorization: `tma ${initDataRaw}`
-    },
-  })
-  .then(response => {
-    console.log(response)
-  })
-  .catch(error => console.log(error));
-}, [initDataRaw]);
+  useEffect(() => {
+    fetch('https://aero-coin-api.vercel.app/', {
+      method: 'GET',
+      headers: {
+        Authorization: `tma ${initDataRaw}`,
+      },
+    })
+    .then(response => response.json())  // Assuming the response is in JSON format
+    .then(data => {
+      console.log(data);  // Log the data received from the API
+    })
+    .catch(error => console.error('Error fetching data:', error));  // Log any errors
 
+  }, [initDataRaw]);
 
   return (
     <div className='relative flex  min-h-screen w-screen  flex-col   justify-evenly items-center  bg-zinc-900'>
