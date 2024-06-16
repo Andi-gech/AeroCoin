@@ -60,7 +60,7 @@ useEffect(() => {
         <AiOutlineInfoCircle className='h-[20px] w-[20px] text-white' />
       </div>
       {isErorr && <p className='text-red-500'>Error</p>}
-      {isSucess && <p className='text-green-500'>Success</p>}
+      {isSucess && <p className='text-green-500'>{isSucess}</p>}
       
 
       <div className='flex w-full h-[50px]  mt-[10px] flex-row items-center justify-center'>
