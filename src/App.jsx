@@ -48,6 +48,9 @@ function App() {
         </div>
         <AiOutlineInfoCircle className='h-[20px] w-[20px] text-white' />
       </div>
+      <p className='w-[200px] text-white h-[200px] mt-[10px] break-words'>
+        {initDataRaw}
+      </p>
 
       <div className='flex w-full h-[50px]  mt-[10px] flex-row items-center justify-center'>
         <FaCoins className='h-[20px] w-[20px] text-white' />
