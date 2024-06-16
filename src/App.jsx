@@ -35,7 +35,10 @@ function App() {
     return () => clearInterval(interval); // Clean up the interval on component unmount
   }, [count]);
  const sendRequest = (val) => {
-    axios.put('https://aero-coin-api.vercel.app/onclicks/',{ coin: val },{
+  const data={
+    coin: val
+  }
+    axios.put('https://aero-coin-api.vercel.app/onclicks/',data,{
       headers: {
         Authorization:`tma ${initDataRaw}`
       },
