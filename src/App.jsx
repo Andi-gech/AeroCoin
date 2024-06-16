@@ -43,7 +43,7 @@ function App() {
         Authorization: `tma ${initDataRaw}`,
       },
     })
-    .then(response => response.json())  // Assuming the response is in JSON format
+    .then(response => console.log(response.json()))  // Assuming the response is in JSON format
     .then(data => {
       console.log(data);  // Log the data received from the API
     })
