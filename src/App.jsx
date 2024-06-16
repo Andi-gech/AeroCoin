@@ -22,18 +22,6 @@ function App() {
 
 
   
-
-  const handleIncrement = () => {
-    setCount(count + 1);
-    navigator.vibrate([200, 100, 200]);
-  };
-  useEffect(() => {
-    const interval = setInterval(() => {
-      sendRequest(count); // Send the current count every 10 seconds
-    }, 10000); // 10 seconds in milliseconds
-
-    return () => clearInterval(interval); // Clean up the interval on component unmount
-  }, [count]);
  const sendRequest = (val) => {
 
     axios.get(`https://aero-coin-api.vercel.app/onclicks/${val}`,{
@@ -48,6 +36,12 @@ function App() {
         console.error('Error sending request:', error);
       });
   };
+  const handleIncrement = () => {
+    setCount(count + 1);
+    sendRequest();
+  };
+ 
+
   const params = new URLSearchParams(initDataRaw);
   const userData = JSON.parse(decodeURIComponent(params.get('user') || '{}'));
   const avatar = useMemo(() => {
