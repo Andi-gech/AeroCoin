@@ -36,10 +36,10 @@ function App() {
         console.error('Error sending request:', error);
       });
   };
-  const handleIncrement = () => {
+  const handleIncrement = useCallback(() => {
     setCount(count + 1);
-    sendRequest();
-  };
+  
+  },[])
  
 
   const params = new URLSearchParams(initDataRaw);
