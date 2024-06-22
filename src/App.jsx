@@ -78,7 +78,7 @@ function App() {
         <img src={avatar} alt='logo' className='h-[50px] w-[50px] rounded-full border-[2px] border-yellow-400' />
         <div className='h-full flex-col mx-2 items-center justify-center'>
           <p className='text-md font-bold text-yellow-300'>@{userData?.username}</p>
-          <p className='text-xs text-gray-400'>id: {userData?.id}</p>
+          <p className='text-xs text-gray-400'>Newid: {userData?.id}</p>
         </div>
         </div>
         <AiOutlineInfoCircle className='h-[20px] w-[20px] text-white' />
